@@ -1,0 +1,57 @@
+@use "./globals.scss";
+@use "./nav";
+
+body{
+    position: fixed; /*no hacer scrool*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.main-home{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url('../assets/neon-wallpaper.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+
+    & section{
+        height: 550px;
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &-text{ 
+        text-align: center;
+        width: 90%;
+        min-width: 288px;
+        margin: 0 auto;
+        color: white;
+        letter-spacing: 10px;
+        font-size: 30px;
+        @include globals.text-shadow(globals.$color-button--blue);
+    }
+
+    &-button{
+        margin: 0 auto;
+        width: 110px;
+        height: 50px;
+        border-radius: 8px;
+        border: none;
+        background-color:#07e2f3;
+        @include globals.box-shadow(globals.$color-button--blue);
+    }
+
+    & a{
+        font-size: 18px;
+    } 
+}  
+
+.main-home-button:hover{
+    box-shadow: 0 0 5px white,0 0 20px white ,0 0 30px white,0 0 50px white ;
+}

@@ -1,0 +1,135 @@
+@use"./globals.scss";
+
+header{
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    & .header-icons-container{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #5212af;
+    
+        & .icons{
+            min-width: 280px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+        
+            & .logo1{
+                display: inline-block;
+                @include globals.background-image-contain(globals.$facebook-icon);
+                width: 30px;
+                height: 30px;
+                filter:invert(100%);/*color white in img black*/
+            }
+
+            & .logo2{
+                display: inline-block;
+                @include globals.background-image-contain(globals.$instagram-icon);
+                width: 30px;
+                height: 30px;
+                filter:invert(100%);/*color white in img black*/
+            }
+
+            & .logo3{
+                display: inline-block;
+                @include globals.background-image-contain(globals.$linkedin-icon);
+                width: 30px;
+                height: 30px;
+                filter:invert(100%);/*color white in img black*/
+            }
+
+            & .logo4{
+                display: inline-block;
+                @include globals.background-image-contain(globals.$github-icon);
+                width: 30px;
+                height: 30px;
+                filter:invert(100%);/*color white in img black*/
+            }
+
+            & .logo5{
+                display: inline-block;
+                @include globals.background-image-contain(globals.$whatsapp-icon);
+                width: 30px;
+                height: 30px;
+                filter:invert(100%);/*color white in img black*/
+            }
+        }
+    }
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+
+        & .nav-logo-container{
+            min-width: 160px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            & div{
+                @include globals.background-image-contain(globals.$logo-image);
+                width: 140px;
+                height: 90px;
+
+                & a{
+                    display: inline-block;
+                    width: 220px;
+                    height: 90px;
+                    border-radius: 12px;
+                }
+            }
+
+            & img{
+                width: 120px;
+                margin-top: 10px;
+            }
+        }
+
+    & .profile-link{
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        margin-right: 20px;
+
+        & a{
+            color: black;
+            border-bottom: 1px solid black;
+            font-size: 1.4rem;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bolder;
+        }
+    }
+}
+
+/**Animations*/
+.logo1:hover, .logo2:hover, .logo3:hover, .logo4:hover, .logo5:hover {
+    box-shadow: 0 0 5px #07e2f3,0 0 20px #07e2f3 ,0 0 30px #07e2f3,0 0 50px #07e2f3 ;
+}
+nav .profile-link a:hover{
+    box-shadow: 0 0 5px #5212af,0 0 20px #5212af ,0 0 30px #5212af,0 0 50px #5212af ;
+}
+nav .nav-logo-container a:hover{
+    box-shadow: 0 0 5px #5212af,0 0 20px #5212af ,0 0 30px #5212af,0 0 50px #5212af ;
+}
+
+@media screen and (min-width: 566px) {
+    nav .nav-logo-container div{
+        width:220px
+    }
+}
+@media screen and (max-width: 566px) {
+    nav .nav-logo-container div a{
+        width:140px
+    }
+}

@@ -1,0 +1,58 @@
+$color-nav:#5212af;
+$color-button--blue:#acffff;
+$color-button--green:#47cfac;
+
+$facebook-icon:url('https://cdn-icons-png.flaticon.com/512/2175/2175193.png');
+$instagram-icon:url('../assets/instagram.svg');
+$linkedin-icon:url('../assets/linkedin.svg');
+$github-icon:url('../assets/github.svg');
+$whatsapp-icon:url('../assets/whatsapp.svg');
+
+$logo-image:url('../assets/Logo-negro.png');
+$background-image:url('../assets/neon-wallpaper.jpg');
+
+
+
+@mixin box-shadow($color) {
+    box-shadow: 0 0 5px $color,0 0 20px $color ,0 0 30px $color,0 0 50px $color ;
+}
+@mixin text-shadow($color) {
+    text-shadow: 0 0 5px $color,0 0 20px $color ,0 0 30px $color,0 0 50px $color ;
+}
+@mixin background-image-contain($image) {
+    background-image: $image;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+@mixin background-image-cover($image) {
+    background-image: $image;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+p, a{
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-align: justify;
+}
+img{
+    border-radius: 12px; 
+}
